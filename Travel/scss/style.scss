@@ -138,8 +138,8 @@
         right: 0;
         width: 100%;
         height: 351px;
-        background: url(../images/main/gradient.png) center / 100% 100% no-repeat,
-                    url(../images/main/clouds.webp) center / 100% 100% no-repeat;
+        background: url(../images/main/gradient.png) center / cover no-repeat,
+                    url(../images/main/clouds.webp) center / cover no-repeat;
         z-index: 7;
     }
 
@@ -889,7 +889,7 @@
     right: 0;
     height: 1308px;
     margin-top: -229px;
-    background: url(../images/lux-trips/bg_whyluxtrip.webp) center / 100% 100% no-repeat;
+    background: url(../images/lux-trips/bg_whyluxtrip.webp) center / cover no-repeat;
     &__container{
         height: 100%;
     }
@@ -1007,7 +1007,7 @@
         left: 0;
         width: 100%;
         height: 1336px;
-        background: url(../images/customize/clouds.webp) center / 100% 100% no-repeat;
+        background: url(../images/customize/clouds.webp) center / cover no-repeat;
         z-index: 2;
         pointer-events: none;
 
@@ -1020,7 +1020,7 @@
         left: 0;
         width: 100%;
         height: 1330px;
-        background: url(../images/customize/bg_strat_trip.webp) center / 100% 100% no-repeat;
+        background: url(../images/customize/bg_strat_trip.webp) center / cover no-repeat;
         z-index: 1;
         pointer-events: none;
 
@@ -1173,7 +1173,7 @@
         width: 100%;
         height: 565px;
         background-color: rebeccapurple;
-        background: url(../images/customize/bg-bottom.webp) center / 100% 100% no-repeat;
+        background: url(../images/customize/bg-bottom.webp) center / cover no-repeat;
         border-radius: 13px;
         // border: 1px solid #AEADA6;
         transition:all 1.5s ease;
@@ -1297,7 +1297,7 @@
         left: 0;
         width: 100%;
         height: 1034px;
-        background: url(../images/customers/girl-in-pull.webp) center/ 100% 100% no-repeat;
+        background: url(../images/customers/girl-in-pull.webp) center/ cover no-repeat;
         // z-index: -1;
         pointer-events: none;
     }
@@ -1340,10 +1340,11 @@
             height: 75px;
             background: url(../images/experiences/e-arrow.svg) center / 100% 100% no-repeat;
             z-index: 8;
+            cursor: pointer;
         }
     }
     &__item{
-        background: url(../images/customers/border_testi.webp) center / 100% 100% no-repeat;
+        background: url(../images/customers/border_testi.webp) center / 100% 100%  no-repeat;
         // min-height: 556px;
         // min-width: 320px;
         overflow: hidden;
@@ -1413,6 +1414,124 @@
         background-color: #fff;
         height: 2px;
     }
+    &__contact-inner{
+        margin: 0 auto;
+        margin-top: 388px;
+        position: relative;
+        z-index: 11;
+        max-width: 920px;
+        min-height: 540px;
+        border-radius: 10px;
+        background: rgba(226, 211, 206, 0.2);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        backdrop-filter: blur(9px);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 95%;
+            padding: 6px 0;
+            margin: 0 auto;
+            margin-top: -8px;
+            margin-bottom: -8px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+            border: 1px solid #FFFFFF;
+            z-index: -11;
+        }
+    }
+    &__contact-label{
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    &__contact-title{
+        max-width: 500px;
+        margin: 0 auto;
+        padding-top: 70px;
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 58px;
+        text-align: center;
+        color: #0C0B10;
+    }
+    &__contact-name{
+        margin-bottom: 14px;
+        padding: 13px 20px 13px 20px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        backdrop-filter: blur(20px);
+        border-radius: 95px;
+
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            text-align: center;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+        }
+    }
+    &__contact-tel{
+        margin-bottom: 37px;
+        padding: 13px 20px 13px 20px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        backdrop-filter: blur(20px);
+        border-radius: 95px;
+
+        &:focus{
+            outline: none;
+            
+        }
+        &::placeholder{
+            text-align: center;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+        }
+    }
+    &__contact-wrapper{
+        &::before{
+            // width: 80%;
+            // height: 61px;
+            transform: translateY(-36px);
+        }
+    }
+    &__contact-btn{
+        position: relative;
+        max-width: 350px;
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-right: 60px;
+        padding-left: 60px;
+    }
 }
 
 .footer{
@@ -1427,7 +1546,7 @@
         left: 0;
         width: 100%;
         height: 555px;
-        background: url(../images/footer/bg_footer.webp) center / 100% 100% no-repeat;
+        background: url(../images/footer/bg_footer.webp) center / cover no-repeat;
     }
 
     &__menu-btn-inner{
@@ -1446,11 +1565,53 @@
         flex-direction: column;
         justify-content: flex-end;
     }
+    &__logo{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 215px;
+        height: 112px;
+        object-fit: cover;
+        
+    }
+    &__logo-img{
+        // object-fit: cover;
+        height: 100%;
+    }
     &__bottom{
+        margin-top: 120px;
         margin-bottom: 34px;
+        display: flex;
+        justify-content: space-between;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0.5px;
+    }
+    &__menu{
+        margin-top: 80px;
     }
     &__menu-list{
         display: grid;
-        grid-template: 1fr / repeat(5, );
+        grid-template: 1fr / repeat(5, minmax(156px, 1fr));
+        justify-content: center;
+        align-items: center;
+    }
+    &__menu-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__menu-link{
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #0C0B10;
     }
 }
