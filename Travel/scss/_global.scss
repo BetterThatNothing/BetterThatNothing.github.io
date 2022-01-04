@@ -25,7 +25,7 @@ body {
 }
 
 .title-with-round{
-	
+  
         position: relative;
         font-family: Forum;
         font-style: normal;
@@ -52,5 +52,48 @@ body {
         }
 }
 
-
-
+.btn-with-bg{
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  background: transparent;
+  border: 0px solid #ffffff;
+  padding: 20px 24px;
+  border-radius: 33px;
+  text-transform: uppercase;
+  font-family: 'Forum', sans-serif;
+  cursor: pointer;
+  transition: all 1s ease;
+  
+  &::after{
+    content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background: url(../images/main/button-call.webp) center  / 100% 100%  no-repeat;
+     cursor: pointer;
+     right: 0;
+     left: 0;
+     margin: 0 auto;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: -1 !important;
+     transition: all 1s ease;
+  }
+  &:hover{
+    transition: all 0.5s ease;
+    &::after{
+        transition: all 0.5s ease;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../images/main/button_call_me-black-min.png) center  / 100% 100%  no-repeat;
+        transition: all 0.5s ease;
+    }
+  }
+}

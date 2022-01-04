@@ -1,0 +1,96 @@
+@media (min-width: 1439px){
+    .container {
+		max-width: 1300px;
+	}
+}
+@media (max-width: 1200px) {
+	.container {
+		max-width: 1060px;
+	}
+    .header__logo{
+        width: 100px;
+        height: 50px;
+    }
+    .menu{
+        font-size: 15px;
+    }
+    .menu__list-item{
+        padding: 0 15px;
+    }
+    .search__btn{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+} 
+
+@media (max-width: 1025px) {
+	.container {
+		max-width: 860px;
+	}
+    .search__param-item{
+        margin-left: 10px;
+    }
+    .search__param{
+        font-size: 16px;
+    }
+    .search__param-link{
+        font-size: 15px;
+    }
+    .experiances__country-item{
+        padding: 0 14px;
+    }
+    .experiances__country-link{
+        font-size: 22px;
+    }
+    .luxury__inner{
+        height: 1600px;
+    }
+    .luxury__row{
+        height: 1000px;
+    }
+    .luxury__item-text{
+        margin-top: 40px;
+        font-size: 28px;
+    }
+    .luxury__count-places{
+        max-width: 110px;
+        margin-bottom: 30px;
+    }
+    .luxury__counter{
+        font-size: 30px;
+    }
+    .luxury__title-item{
+        font-size: 39px;
+    }
+    .book__row{
+        gap: 20px;
+    }
+    .book__row-item--supercars{
+        background: url(../images/book/supercars.webp) center/ cover no-repeat;
+    }
+    .book__row-text{
+        font-size: 34px;
+    }
+    .customise__subscribe-title{
+        font-size: 58px;
+    }
+    .customise__subscribe-btnwrapper{
+        // max-width: 40%;
+    }
+    .customise__subscribe-btn{
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+}
+
+@media (max-width: 769px) {
+	.container {
+		max-width: 95%;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+	}
+}
