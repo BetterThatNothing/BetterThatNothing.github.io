@@ -187,7 +187,7 @@ function callCustomersSlider(){
     //     });
     // }
 
-    // setSliderAutoScroll(5000);
+    setSliderAutoScroll(5000);
     let setIndex = setActivePageIndex();
 
 }
