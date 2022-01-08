@@ -1321,45 +1321,95 @@
         width: 253px;
         margin-bottom: 60px;
     }
+    &__slider{
+        position: relative;
+        z-index: 6;
+    }
+    &__btn-next{
+        height: 90%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: auto;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 7;
+        border: none;
+        transition: all 1s ease;
+
+        &:hover{    
+            background-blend-mode: multiply;
+            background: linear-gradient(180deg, rgba(226, 211, 206, 0) 0%, #E2D3CE 99.99%),transparent;
+            opacity: .4;
+            transition: all 0.4s ease;
+        }
+    }
+    &-btn-next__img{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+
+       
+    }
     &__row{
         // margin-left: 165px;
         position: relative;
-        left: 200px;
-        display: grid;
-        grid-template: minmax(536px, 639px) / repeat(2, minmax(320px, 636px));
+        // left: 200px;
+        display: flex;
+        // grid-template: minmax(536px, 639px) / repeat(2, minmax(320px, 636px));
         gap: 94px;
         z-index: 6;
         row-gap: 50px;
 
-        &::before{
-            content: '';
-            position: absolute;
-            width: 900px;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: linear-gradient(180deg, rgba(226, 211, 206, 0) 0%, #E2D3CE 99.99%);
-            transform: rotate(-90deg);
-            z-index: 7;
-            pointer-events: none;
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 250px;
-            transform: translateY(-50%);
-            width: 75px;
-            height: 75px;
-            background: url(../images/experiences/e-arrow.svg) center / 100% 100% no-repeat;
-            z-index: 8;
-            cursor: pointer;
-        }
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     width: 900px;
+        //     height: 100%;
+        //     top: 0;
+        //     right: 0;
+        //     background: linear-gradient(180deg, rgba(226, 211, 206, 0) 0%, #E2D3CE 99.99%);
+        //     transform: rotate(-90deg);
+        //     z-index: 7;
+        //     pointer-events: none;
+        // }
+        // &::after{
+        //     content: '';
+        //     position: absolute;
+        //     top: 50%;
+        //     right: 250px;
+        //     transform: translateY(-50%);
+        //     width: 75px;
+        //     height: 75px;
+        //     background: url(../images/experiences/e-arrow.svg) center / 100% 100% no-repeat;
+        //     z-index: 8;
+        //     cursor: pointer;
+        // }
+    }
+    &__row-inner{
+        position: relative;
+        padding-bottom: 100px;
+
+
+        // &::after{
+        //     content: '';
+        //     position: absolute;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     right: 0px;
+        //     width: 90px;
+        //     height: 90px;
+        //     background: url(../images/experiences/e-arrow.svg) center / cover no-repeat;
+        //     z-index: 6;
+        // }
     }
     &__item{
         background: url(../images/customers/border_testi.webp) center / 100% 100%  no-repeat;
-        // min-height: 556px;
-        // min-width: 320px;
+        // min-width: 636px;
+        // min-height: 659px;
         overflow: hidden;
         cursor: pointer;
     }
@@ -1373,7 +1423,6 @@
         margin-bottom: 57px;
     }
     &__item-img{
-        // flex: 1 1 102px;
         width: 90px;
         height: 90px;
         object-fit: cover;
@@ -1411,20 +1460,29 @@
 
     }
     &__page-index{
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
         display: grid;
         grid-area: 2 / 1 / 2 / 3;
-        grid-template: repeat(2,3px) / repeat(5, minmax(38px , 100px));
+        grid-template: repeat(2,3px) / repeat(4, minmax(38px , 100px));
         gap: 20px;
         margin: 0 auto;
+        z-index: 6;
+
     }
     &__page-index-item{
         width: 100%;
         height: 2px;
         background-color: #D3D6E0;
         cursor: pointer;
-
+        transition: all 0.2s ease;
     }
     &__page-index-item--active{
+        transition: all 0.2s ease;
         background-color: #fff;
         height: 2px;
     }
@@ -1665,6 +1723,7 @@
     margin: 0 0 0 auto;
 }
 .slider__container{
+
 }
 .slider__track{
     // background-color: yellow;
@@ -1677,6 +1736,7 @@
 }
 
 .slider-wrapper{
+    display: none;
     width: 600px;
     margin: 0 auto;
 }
