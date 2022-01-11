@@ -1,5 +1,41 @@
 
 
+
+function setText(className, text) {
+    return new Promise(function(resolve, reject){
+
+        document.querySelector(`.${className}`).textContent = `${text}`;
+
+        resolve('Done!');
+        reject(new Error(`Error`));
+    });
+}
+
+let textPromiseSetText = setText('header__btn', 'CALL ME');
+
+textPromiseSetText.then(
+    result => console.log(result),
+    error => console.log(error)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // <SLIDER>
 
 // function callSlider(){

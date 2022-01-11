@@ -4,18 +4,33 @@
 // <SLIDER>
 
 function callSlider(){
-    const rowGap = 30;
+    let rowGap = 30;
     let position = 0;
-    const slidesToShow = 4;
-    const slidesToScroll = 2;
-    const btnNext = document.querySelector('.experiances__arrow-img');
     const container = document.querySelector('.slider__container');
+    let slidesToShow = 4;
+    let slidesToScroll = 2;
+
+    if(container.clientWidth < 769) {
+        slidesToShow = 2;
+        slidesToScroll = 1;
+        rowGap = 15;
+   }
+    if(container.clientWidth < 460) {
+        slidesToShow = 1;
+        slidesToScroll = 1;
+        rowGap = 15;
+   }
+   
+    const btnNext = document.querySelector('.experiances__arrow-img');
     const track = document.querySelector('.slider__track');
     const items = document.querySelectorAll('.experiances__item');
     const itemsCount = items.length;
     const itemWidth = container.clientWidth / slidesToShow ;
     const movePosition = slidesToScroll * (itemWidth + rowGap);
     
+    
+
+
     items.forEach( (item) => {
         item.style.minWidth = `${itemWidth}px`;
     });
@@ -187,7 +202,7 @@ function callCustomersSlider(){
     //     });
     // }
 
-    setSliderAutoScroll(5000);
+    // setSliderAutoScroll(5000);
     let setIndex = setActivePageIndex();
 
 }
