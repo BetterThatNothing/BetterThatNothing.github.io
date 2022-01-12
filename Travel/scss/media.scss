@@ -195,17 +195,7 @@
         justify-content: space-between;
         // grid-template: minmax(50px, 80px) / minmax(88px, 88px) minmax(60px, 100px) minmax(30px, 30px);
     }
-    .btn-with-bg{
-        display: flex;
-        // font-size: 10px;
-        border: 1px solid #fff;
-        background: transparent;
-        padding: 0;
-        &::after{
-            content: '';
-            background: transparent;
-        }
-    }
+    
     .header__btn{
         width: 88px;
         word-break: initial;
@@ -215,6 +205,13 @@
         justify-content: center;
         text-align: center;
         // margin-right: 40px;
+            // font-size: 10px;
+            border: 1px solid #fff;
+            background: transparent;
+            &::after{
+                content: '';
+                background: transparent;
+            }
     }
 	.header__logo-link{
         display: flex;
@@ -381,7 +378,7 @@
 
     }
     .luxury__row{
-        padding-top: 200px;
+        padding-top: 150px;
         display: flex;
         height: 800px;
     }
@@ -394,5 +391,101 @@
         position: absolute;
         top: 0;
         right: 0;
+    }
+    .slider__item{
+        min-height: 560px;
+    }
+    .luxury__offset{
+        padding-top: 70px;
+    }
+    .luxury__title-item{
+        display: grid;
+        grid-template: 1fr / 1fr 140px;
+        gap: 20px;
+        
+    }
+    .luxury__btn{
+         padding-left: 0;
+         padding-right: 0;
+         text-align: center;
+    }
+    .luxury__title{
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 44px;
+        color: #0C0B10;
+    }
+    .luxury__item{
+        min-height: 560px;
+    }
+    .luxury::after{
+        height: 50%;
+    }
+    .luxury__inner{
+        height: 1300px;
+    }
+    .book__row{
+        grid-template: unset;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .lux-trips__title-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: unset;
+    }
+    .lux-trips__title{
+        width: 160px;
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+        color: #0C0B10;
+        margin-bottom: 23px;
+    }
+    .lux-trips__title-text{
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: normal;
+        width: 100%;    
+        font-size: 17px;
+        line-height: 179.8%;
+        color: #000000;
+    }
+    .lux-trips__content-uptext{
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    .lux-trips__inner{
+        padding-top: 150px;
+    }
+    .lux-trips__content-uptext{
+        margin-left: 20px;
+    }
+    .lux-trips{
+        top: 0;
+    }
+    .lux-trips__content-item{
+        width: 100%;
+    }
+    .lux-trips__content-itemrow{
+        margin: 0;
+        width: 100%;
+        margin-left: -70px;
+    }
+    .lux-trips__content-img{
+        position: relative;
+        right: 100px;
+    }
+    .lux-trips__content-itemtext{
+        width: 100%;
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: bold;
+        word-wrap: break-word;
+        color: #0C0B10;
     }
 }

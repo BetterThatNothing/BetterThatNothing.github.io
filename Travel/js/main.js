@@ -1,6 +1,8 @@
 
 
 
+
+
 function setText(className, text) {
     return new Promise(function(resolve, reject){
 
@@ -11,14 +13,33 @@ function setText(className, text) {
     });
 }
 
-let textPromiseSetText = setText('header__btn', 'CALL ME');
+function insertCutElement(className, insertClass) {
+    return new Promise(function(resolve, reject){
+        const elementToCut = document.querySelector(`.${className}`);
+        const classToInsert = document.querySelector(`.${insertClass}`);
+        let copyElement = elementToCut;
+        
+        elementToCut.remove();
+        classToInsert.append(copyElement);
+        
 
-textPromiseSetText.then(
-    result => console.log(result),
-    error => console.log(error)
-)
+        resolve('insertCutElement was finished correctly');
+        reject(new Error(`insertCutElement Error`));
+    })
+}
 
 
+if(document.querySelector('.container').clientWidth < 460) {
+
+    let textPromiseSetText = setText('header__btn', 'CALL ME');
+    textPromiseSetText.then(
+        result => console.log(result),
+        error => console.log(error)
+    )
+
+    insertCutElement('lux-trips__content-smalltext', 'lux-trips__content-itemrow');
+    
+}
 
 
 
