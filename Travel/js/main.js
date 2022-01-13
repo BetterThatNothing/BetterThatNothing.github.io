@@ -23,7 +23,7 @@ function insertCutElement(className, insertClass) {
         classToInsert.append(copyElement);
         
 
-        resolve('insertCutElement was finished correctly');
+        resolve(`Class ${className}  was inserted correctly to insertClass`);
         reject(new Error(`insertCutElement Error`));
     })
 }
@@ -37,7 +37,14 @@ if(document.querySelector('.container').clientWidth < 460) {
         error => console.log(error)
     )
 
-    insertCutElement('lux-trips__content-smalltext', 'lux-trips__content-itemrow');
+    insertCutElement('lux-trips__content-smalltext', 'lux-trips__content-itemrow').then(
+        result => console.log(result),
+        error => console.log(error)
+    );
+    insertCutElement('lux-trips__content-btn', 'lux-trips__content').then(
+        result => console.log(result),
+        error => console.log(error)
+    );
     
 }
 

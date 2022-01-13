@@ -81,7 +81,7 @@ function callSlider(){
     
             setPosition();
     
-            console.log(itemsLeft);
+            // console.log(itemsLeft);
         }, ms);
     }
     
@@ -91,14 +91,26 @@ function callSlider(){
 callSlider();
 
 function callCustomersSlider(){
-    const rowGap = 30;
+    let rowGap = 30;
     let position = 0;
-    const slidesToShow = 2;
-    const slidesToScroll = 1;
+    const container = document.querySelector('.customers__row-inner');
+    let slidesToShow = 2;
+    let slidesToScroll = 1;
+
+    if(container.clientWidth < 769) {
+        slidesToShow = 2;
+        slidesToScroll = 1;
+        rowGap = 15;
+   }
+    if(container.clientWidth < 460) {
+        slidesToShow = 1;
+        slidesToScroll = 1;
+        rowGap =  0;
+   }
+    
     const btnNext = document.querySelector('.customers__btn-next');
     const btnNextCustomers = document.querySelector('.customers__btn-next');
     // const btnPrev = document.querySelector('.experiances__arrow-img');
-    const container = document.querySelector('.customers__row-inner');
     const track = document.querySelector('.customers__row');
     const items = document.querySelectorAll('.customers__item');
     const itemsCount = items.length;
@@ -124,7 +136,7 @@ function callCustomersSlider(){
 
        
 
-        console.log(itemsLeft);
+        // console.log(itemsLeft);
         // checkBtns();
         // console.log(btnNext);
     });
@@ -141,7 +153,7 @@ function callCustomersSlider(){
     function setSliderAutoScroll(ms) {
         let key = setInterval(() => {
 
-            const itemsLeft = itemsCount - Math.floor((Math.abs(position) + slidesToShow * itemWidth) / itemWidth);
+            const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
     
             position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * (itemWidth + rowGap);
             
@@ -152,7 +164,7 @@ function callCustomersSlider(){
             setPosition();
             setIndex();
 
-            console.log(itemsLeft);
+            // console.log(itemsLeft);
         }, ms);
 
         
@@ -202,7 +214,7 @@ function callCustomersSlider(){
     //     });
     // }
 
-    // setSliderAutoScroll(5000);
+    setSliderAutoScroll(5000);
     let setIndex = setActivePageIndex();
 
 }
