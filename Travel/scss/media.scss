@@ -295,18 +295,34 @@
     }
     .main{
         background: none;
+        background: url(../images/main-mobile/sky.webp) top center/100% 620px no-repeat;
         &::before{
-            background: none;
+            height: 430px;
+            // background: none;
+            background: url(../images/main-mobile/back-main-bg.webp) center center/100% 430px no-repeat;
+            top: 248px;
         }
         &::after{
-            background: none;
+            // background: none;
+            background: url(../images/main-mobile/mountains.webp) top center / 100% 336px no-repeat;
+            top: 336px;
         }
     }
     .main__overlay{
         background: none;
+        top: 309px;
+        background: url(../images/main-mobile/main-bg.webp) top center/100% 320px no-repeat;
     }
     .main__clouds{
         background: none;
+        // background: url(../images/main/clouds.webp) center/cover no-repeat) ,
+        // linear-gradient(180deg, rgba(226, 211, 206, 0) 0%, rgba(226, 211, 206, 0.71) 42.71%, #E2D3CE 100%);
+        // background: linear-gradient(180deg, rgba(226, 211, 206, 0) 0%, rgba(226, 211, 206, 0.71) 42.71%, #E2D3CE 100%);
+        // linear-gradient(0deg, rgba(226,211,206,0) 0%, #E2D3CE 99.99%);
+        background-blend-mode: multiply;
+        // opacity: .8;
+        height: 421px;
+        // transform: rotate(180deg);
     }
     .main__title{
         &::after{
