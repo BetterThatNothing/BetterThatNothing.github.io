@@ -29,6 +29,7 @@ function insertCutElement(className, insertClass) {
 }
 
 
+
 if(document.querySelector('.container').clientWidth < 460) {
 
     let textPromiseSetText = setText('header__btn', 'CALL ME');

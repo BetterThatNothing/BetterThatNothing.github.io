@@ -138,7 +138,7 @@
         display: grid;
         align-items: center;
         grid-template: repeat(3, 1px) / 60px;
-        z-index: 11;
+        z-index: 100;
         transition: all 0.4s ease 0s;
         cursor: pointer;
         row-gap: 12px;
@@ -185,6 +185,57 @@
 		width: 100%;
         max-width: 100%;
 	}
+
+    .main__sidebar{
+        position: fixed;
+        background: #E2D3CE;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        top: -200%;
+        right: 0;
+        left: 0;
+        transition: all 0.3s ease;
+
+    }
+    .main__sidebar--active{
+        top: 0;
+        transition: all 0.3s ease;
+    }
+    .menu__sidebar-list{
+        display: flex;
+        align-items: center;
+        background: url(../images/main-mobile/rumble.svg) center / 100% 100% no-repeat;
+    }
+    .menu__sidebar-item{
+        margin-bottom: 54px;
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .menu__sidebar-item:last-child{
+        margin: 0;
+    }
+    .main__sidebar-inner{
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+        padding: 0 40px;
+        
+
+    }
+    .menu__sidebar-list{
+        display: flex;
+        flex-direction: column;
+        background: #E2D3CE;
+        z-index: 20;
+    }
 }
 
 @media (max-width: 460px) {
@@ -222,6 +273,7 @@
     .header__logo{
         width: 100%;
         height: 40px;
+
     }
     .menu{
         width: unset;
@@ -248,6 +300,9 @@
     .menu__list-item{
         margin: 0;
         padding: 0;
+    }
+    .menu__list{
+        // display: none;
     }
     .header__container{
         margin: 20px 20px;
@@ -713,6 +768,7 @@
     .footer__polcy{
         margin-top: 8px;
     }
+
     // position: absolute;
     // width: 90%;
     // margin: 0 auto;

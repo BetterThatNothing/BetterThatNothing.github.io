@@ -18,6 +18,7 @@
         width: 15%;
         display: flex;
         cursor: pointer;
+        z-index: 20;
     }
     &__inner{
         display: flex;
@@ -40,6 +41,7 @@
         padding: 20px 34px;
         cursor: pointer;
         margin-left: auto;
+        z-index: 20;
     }
    
 }
@@ -53,7 +55,10 @@
     line-height: 18px;
     text-transform: uppercase;
     font-weight: 400;
+    z-index: 20;
 
+  
+    
     &__list{
         width: 100%;
         display: flex;
@@ -70,6 +75,7 @@
         color: #000;
         font-family: Forum;
     }
+
 }
 
 .main{
@@ -78,6 +84,15 @@
     height: 960px;
     position: relative;
 
+    &__sidebar--active{
+        top: 0;
+        transform: translateY(0%);
+    }
+    &__sidebar{
+        // transform: translateY(500%);
+        top: 200%;
+        z-index: 10;
+    }
     &__overlay{
         position: absolute;
         bottom: 0px;
@@ -190,7 +205,7 @@
 
 .search{
     position: relative;
-    z-index: 10;
+    z-index: 9;
     width: 100%;
 
     &__inner{
@@ -742,7 +757,7 @@
     position: relative;
     bottom: 370px;
     right: 0;
-    z-index: 111;
+    z-index: 11;
     margin-bottom: -370px;
     // padding-top: 111px;
     &::before{
@@ -1637,6 +1652,7 @@
         object-fit: cover;
         
     }
+    
     &__logo-img{
         // object-fit: cover;
         height: 100%;

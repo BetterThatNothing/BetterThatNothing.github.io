@@ -221,3 +221,42 @@ function callCustomersSlider(){
 
 callCustomersSlider();
 // </SLIDER>
+
+
+function sidebarMenu() {
+    const sidebarHeader = document.querySelector('.main__sidebar');
+    const menuBtnHeader = document.querySelector('.header__burger');
+    // let menuIsOpen = false; 
+
+    
+    function headerMenu(isOpen = false) {
+    
+           menuBtnHeader.addEventListener('click', () => {
+               if(isOpen === false) {
+                   openMenu();
+                   isOpen = true;
+                   
+               } else {
+                   closeMenu();
+                   isOpen = false;
+               }
+           })
+            
+    }
+    function openMenu(){
+            sidebarHeader.classList.add('main__sidebar--active');
+            document.body.classList.add('body--lock');
+            console.log('open');
+    }
+    function closeMenu(){
+            sidebarHeader.classList.remove('main__sidebar--active');
+            document.body.classList.remove('body--lock');
+            
+            console.log('closed');
+    }
+
+    headerMenu();
+    
+}
+
+sidebarMenu();
