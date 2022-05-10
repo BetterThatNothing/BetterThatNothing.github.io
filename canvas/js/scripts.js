@@ -27,12 +27,15 @@ class Circle {
     update() {
         if(this.x + this.radius > window.innerWidth || this.x - this.radius < 0 ) {
             this.dx = -this.dx;
-            c.fillStyle = randomInteger(1, colorsArray.length - 1);
-            c.fill();
+
+            const colorIndex = randomInteger(1, colorsArray.length - 1);
+            this.color = colorsArray[colorIndex];
         }
         if(this.y + this.radius > window.innerHeight || this.y - this.radius < 0 ) {
             this.dy = -this.dy;
-            // c.fillStyle = randomInteger(1, colorsArray.length - 1);
+
+            const colorIndex = randomInteger(1, colorsArray.length - 1);
+            this.color = colorsArray[colorIndex];
         }
         
         this.x += this.dx;
@@ -45,7 +48,7 @@ const circle = new Circle(150, 200, 60, 5, 5);
 // Случайное целое число в заданном промежутке:
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+}
 
 const colorsArray = ['#e26a6a', 
 '#d2527f', 
@@ -56,7 +59,7 @@ const colorsArray = ['#e26a6a',
 '#e87e04',
 '#1f3a93',
 '#013243',
-'#336e7b'
+'#336e7b',
 ];
 
 const circlesArray = [];
@@ -67,7 +70,7 @@ for(let i = 0; i < 222; i++) {
     let y = Math.random() * (window.innerHeight - radius * 2) + radius;
 
     let dx = (Math.random() - 0.5) * 2;
-    let dy = (Math.random() - 0.5 )* 2;
+    let dy = (Math.random() - 0.5) * 2;
 
     const colorIndex = randomInteger(1, colorsArray.length - 1);
     circlesArray.push(new Circle(x, y, radius, dx, dy, colorsArray[colorIndex]));
